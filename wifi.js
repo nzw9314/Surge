@@ -6,7 +6,7 @@ $surge.setOutboundMode("direct");
 notify(1);
 } else {
 $surge.setOutboundMode("rule");
-notify(1);
+notify(0);
 }
 
 function notify(mode) {
