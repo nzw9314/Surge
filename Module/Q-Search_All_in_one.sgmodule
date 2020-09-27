@@ -1,30 +1,45 @@
-#!name=🔍Q-Search-All in one Modified by nzw9314
+#!name=🔍Q-Search-All
 #!desc=Browser Search Add-ons, Modified from module by Neurogram
 #!system=ios
 
+
 # Q-Search 
-# Modified by nzw9314 
-# From Neurogram (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
+# Modified by nzw9314
+#barry love juan
 
 # - Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
-
 #  注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
-
 # 可自行修改指令或者添加搜索引擎
 
+
+
 # gh：  GitHub搜索
+# git: Gitee搜索项目
+# gitc: Gitee搜索源码
 # gm：  Google图片搜索
 # sof:  Stack Overflow
 # se:   StackExchange
+# wa:   wolframalpha搜索
+# dg:   多吉搜索
 # wiki: 维基百科
 # wk:   维基中文
+# how:  wikihow（how 提高)
 # mg:   Magi
 # tf:   Google 搜索 TestFlight
+# bdwk: 百度文库搜索
+# bdtb: 百度贴吧
+
+
 
 # yd：有道词典搜索
 # trc: Google 译至中
 # tre: Google 译至英
 # trj: Google 译至日
+# dec: Deepl  英译中
+# dee：Deepl  中译英
+# dej: Deepl  中译日
+# dejc:Deepl  日译中
+
 
 
 # db：豆瓣搜索
@@ -33,32 +48,120 @@
 # wx: 微信
 # rd: Reddit
 # ssp: 少数派
+# tieba: 百度贴吧搜索（tieba 吧名）
 # csdn: CSDN
+# jshu:简书
+# blog: 博客园搜索
+# yh: 油猴搜索
+
+
 
 # zdm: 什么值得买
 # amz: 亚马逊
 # jd: 京东
 # tb: 淘宝
 # tm: 天猫
+# sn: 苏宁
+# pdd: 拼爹爹
+# gmdq: 国美
+# dd: 当当
+# yj: 宜家
+# mt: 美团
+# elm: 饿了么
+# didi: 滴滴出行
+
 
 # ac:  Acfun
 # bli: 哔哩哔哩
+# dm: 简单动漫搜索
+# adm: 爱动漫(动漫bt资源搜索)
 # ytb: YouTube
 # ph:  PornHub 
+# kw: 酷我音乐搜索
+# yfs：音范丝搜索
+
+
+# api:Devdocs开发文档的搜索(eg: api json)
+# gdb: 古丁堡图书
+# bk: TheFuture图书搜索
+# syb: 时宜搜书
+# bok: b-ok搜书(全)
+# mzl: magazinelib(期刊)
+# linux: linux命令
+# paper: connectedpapers
+# fm: tunefind
+# cai: 菜鸟教程
+# kd: 快递查询(加上快递号即可)
+# tq: 天气（彩云天气)
+# om: ourmacs搜索(mac软件)
+# macw: macw搜索(mac软件)
+# gtop: git:logs(github热门资源搜索)
+# whois: 域名所属查询
+# repo: 越狱插件搜索
+
+
+
+
 # gd:  Google Drive资源
+# zp:  Google Drive资源搜索（zhao.pp.ua)
 # tgd: TG搜索Google Drive资源
+# xmp：小马盘搜索
+#dl: 大力网盘搜索
+#zm: 字幕搜索
+#zms: subhdd字幕搜索
+#zmk: 字幕库搜索
+ 
+ 
+ 
+# csx: CiteSeerX搜索
+# fts:  findarticles搜索
+# mdv： medrxiv搜索
+ 
+# 备件价格查询
+#xm:  小米备件查询
+#hw:  华为备件查询
+#op:  oppo备件查询
+#vi:  vivo备件查询
+#plus:一加备件查询
+
+ 
+ 
+#游戏
+#sm: steam
+#wg: wegame
+#ec: epicgame
+#cj: cubejoy(方块游戏平台)
+
+
+#成分分析（为我家宝宝准备的）
+#gyj: 国家食品药品监督管理总局化妆品（品牌成分查询）
+#gyj-in: 进口化妆品成分查询
+#cdna: cosdna(护肤品成分的作用搜索)
+#cpro: cosdna护肤品(品牌的成分及作用搜索)
+#zyl: 找原料(数据比较全，但是偏向全类型)
+
+
  
 # bi: 必应
 # bd：百度搜索
 # ddg：DuckDuckGo 搜索
 # 无指令则转 Google 搜索
 
+
+
 [URL Rewrite]
 
 #gm   (Google图片)
 ^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+
 # gh   (GitHub)
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+
+# git (gitee搜项目)
+^https:\/\/duckduckgo.com\/\?q=git\+([^&]+).+ https://search.gitee.com/?skin=rec&type=repository&q=$1 302
+
+# gitc (gitee搜源码)
+^https:\/\/duckduckgo.com\/\?q=gitc\+([^&]+).+ https://search.gitee.com/?skin=rec&type=code&q=$1 302
 
 # sof  (Stack Overflow)
 ^https:\/\/duckduckgo.com\/\?q=sof\+([^&]+).+ https://stackoverflow.com/search?q=$1 302
@@ -69,17 +172,33 @@
 # wa  (WolframAlpha)
 ^https:\/\/duckduckgo.com\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
 
+# dg (dogedoge)
+^https:\/\/duckduckgo.com\/\?q=dg\+([^&]+).+ https://www.dogedoge.com/results?q=$1 302
+
 # wiki  (维基百科)
 ^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
 
 # wk  (维基中文)
 ^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
 
+# how (wikihow)
+^https:\/\/duckduckgo.com\/\?q=how\+([^&]+).+ https://zh.wikihow.com/wikiHowTo?search=$1 302
+
 # mg  (Magi)
 ^https:\/\/duckduckgo.com\/\?q=mg(\+|%20)([^&]+).+ https://magi.com/search?q=$2 302
 
 # tf  (Google 搜索 TestFlight)
 ^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+
+#bdwk 百度文库搜索
+^https:\/\/duckduckgo.com\/\?q=bdwk\+([^&]+).+ https://wk.baidu.com/search?fr=searchpage&word=$1 302
+
+#bdtb 百度贴吧
+^https:\/\/duckduckgo.com\/\?q=bdtb\+([^&]+).+ https://tieba.baidu.com/mo/q/m?word=$1&page_from_search=index&tn6=bdISP&tn4=bdKSW&tn7=bdPSB&lm=16842752&lp=6093&sub4=%E8%BF%9B%E5%90%A7&pn=0& 302
+
+ 
+
+
 
 # > 翻译
 # yd   (有道)
@@ -94,6 +213,17 @@
 # trj  (Google 译至日)
 ^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
 
+#dec(deepl 英译中)
+^https:\/\/duckduckgo.com\/\?q=dec\+([^&]+).+ https://www.deepl.com/translator#en/zh/$1 302
+
+#dee(deepl 中译英)
+^https:\/\/duckduckgo.com\/\?q=dee\+([^&]+).+ https://www.deepl.com/translator#zh/en/$1 302
+
+#dej(deepl 中译日)
+^https:\/\/duckduckgo.com\/\?q=dej\+([^&]+).+ https://www.deepl.com/translator#zh/ja/$1 302
+
+#dejc(deepl 日译中)
+^https:\/\/duckduckgo.com\/\?q=dejc\+([^&]+).+ https://www.deepl.com/translator#ja/zh/$1 302
 
 # 社区
 
@@ -121,6 +251,88 @@
 # csdn: CSDN
 ^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
 
+# jshu: 简书
+^https:\/\/duckduckgo.com\/\?q=jshu\+([^&]+).+ https://www.jianshu.com/search?q=$1 302
+
+# blog: 博客园
+^https:\/\/duckduckgo.com\/\?q=blog\+([^&]+).+ https://zzk.cnblogs.com/s?w=$1 302
+
+#命令
+
+# yh: 油猴搜索
+^https:\/\/duckduckgo.com\/\?q=yh\+([^&]+).+ https://greasyfork.org/zh-CN/scripts?q=$1 302
+
+#api: 开发文档搜索
+^https:\/\/duckduckgo.com\/\?q=api\+([^&]+).+ https://devdocs.io/#q=$1 302
+
+# linux linux命令
+^https:\/\/duckduckgo.com\/\?q=linux\+([^&]+).+ https://wangchujiang.com/linux-command/list.html#!kw=$1 302
+
+# gdb: 古丁堡图书
+^https:\/\/duckduckgo.com\/\?q=gdb\+([^&]+).+ http://www.gutenberg.org/ebooks/search/?query=$1 302
+
+# bk: TheFuture图书搜索
+^https:\/\/duckduckgo.com\/\?q=bk\+([^&]+).+ https://bks.thefuture.top/result.php?q=$1&from=fromsearchbox 302
+
+# syb: 时宜搜书
+^https:\/\/duckduckgo.com\/\?q=syb\+([^&]+).+ https://www.shiyisoushu.com/search/$1 302
+
+# bok: b-ok搜书(全)
+^https:\/\/duckduckgo.com\/\?q=bok\+([^&]+).+ https://b-ok.global/s/$1 302
+
+# fm: tunefind
+^https:\/\/duckduckgo.com\/\?q=fm\+([^&]+).+ https://www.tunefind.com/search/site?q=$1 302
+
+# mzl: magazinelib(期刊)
+^https:\/\/duckduckgo.com\/\?q=mzl\+([^&]+).+ https://magazinelib.com/?s=$1 302
+
+# paper: connectedpapers
+^https:\/\/duckduckgo.com\/\?q=paper\+([^&]+).+ https://www.connectedpapers.com/search?q=$1 302
+
+# cai: 菜鸟教程
+^https:\/\/duckduckgo.com\/\?q=cai\+([^&]+).+ https://www.runoob.com/?s=$1 302
+
+# kd:快递查询
+^https:\/\/duckduckgo.com\/\?q=kd\+([^&]+).+ https://m.kuaidi100.com/result.jsp?nu=$1 302
+
+# tq:天气查询
+^https:\/\/duckduckgo.com\/\?q=tq\+([^&]+).+ https://caiyunapp.com/weather/ 302
+
+# om:ourmacs搜mac软件
+^https:\/\/duckduckgo.com\/\?q=om\+([^&]+).+ https://ourmacs.com/search/apps?q=$1 302
+
+# macw: macw搜mac软件
+^https:\/\/duckduckgo.com\/\?q=macw\+([^&]+).+ https://m.macw.com/search/all_$1.html 302
+
+# gtop: git:logs热门项目搜索
+^https:\/\/duckduckgo.com\/\?q=gtop\+([^&]+).+ https://www.gitlogs.com/most_popular?topic=$1 302
+
+# whois: 域名所属查询
+^https:\/\/duckduckgo.com\/\?q=whois\+([^&]+).+ https://whois.aliyun.com/whois/domain/$1 302
+
+#repo: 越狱插件搜索
+^https:\/\/duckduckgo.com\/\?q=repo\+([^&]+).+ https://www.ios-repo-updates.com/search/?s=$1 302
+
+
+
+
+
+#字幕搜索
+
+#zm: 字幕搜索
+^https:\/\/duckduckgo.com\/\?q=zm\+([^&]+).+ https://assrt.net/sub/?searchword=$1 302
+
+#zmk: 字幕库搜索
+^https:\/\/duckduckgo.com\/\?q=zmk\+([^&]+).+ http://www.zimuku.la/search?q=$1 302
+
+#zms: subhdd字幕搜索
+^https:\/\/duckduckgo.com\/\?q=zms\+([^&]+).+ https://subhd.tv/search/$1 302
+
+
+
+
+
+
 # > 购物
 # zdm: 什么值得买
 ^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
@@ -137,6 +349,33 @@
 # tm: 天猫
 ^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
 
+#sn : 苏宁
+^https:\/\/duckduckgo.com\/\?q=sn\+([^&]+).+ https://m.suning.com/search/$1/&jlftownCode=5660118 302
+
+#pdd: 拼爹爹
+^https:\/\/duckduckgo.com\/\?q=pdd\+([^&]+).+ http://yangkeduo.com/search_result.html?search_key=$1 302
+
+#gm: 国美
+^https:\/\/duckduckgo.com\/\?q=gmdq\+([^&]+).+ https://m.gome.com.cn/category.html?from=1&scat=2&channel=&c3ids=&key_word=$1 302
+
+#dd: 当当
+^https:\/\/duckduckgo.com\/\?q=dd\+([^&]+).+ http://search.m.dangdang.com/search.php?keyword=$1 302
+
+#yj: 宜家
+^https:\/\/duckduckgo.com\/\?q=yj\+([^&]+).+ https://www.ikea.cn/cn/zh/search/products/?q=$1 302
+
+#mt: 美团
+^https:\/\/duckduckgo.com\/\?q=mt\+([^&]+).+ https://h5.waimai.meituan.com/waimai/mindex/searchresults?queryType=12002&keyword=$1&entranceId=0&qwTypeId=11002&mode=search 302
+
+#elm: 饿了么
+^https:\/\/duckduckgo.com\/\?q=elm\+([^&]+).+ https://h5.ele.me/search/#/shop?keyword=$1&isShow=true 302
+
+#didi:滴滴出行
+^https:\/\/duckduckgo.com\/\?q=didi\+([^&]+).+ https://common.diditaxi.com.cn/general/webEntry?wx=true#/ 302
+
+
+
+
 # 视频资源
 
 # ac (Acfun)
@@ -145,17 +384,126 @@
 # bli (哔哩哔哩) 
 ^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
 
+# dm (简单动漫资源搜索)
+^https:\/\/duckduckgo.com\/\?q=dm\+([^&]+).+ https://www.36dm.club/search.php?keyword=$1 302
+
+# adm (爱动漫bt资源搜索)
+^https:\/\/duckduckgo.com\/\?q=adm\+([^&]+).+ http://m.kisssub.org/search.php?keyword=$1 302
+
+#nm(网易云音乐 不可用)
+#^https:\/\/duckduckgo.com\/\?q=nm\+([^&]+).+ https://music.163.com/#/search/m/?s=$1 302
+
+#qm(QQ音乐)
+#^https:\/\/duckduckgo.com\/\?q=qm\+([^&]+).+ https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w=$1 302
+
+#kw(酷我音乐)
+^https:\/\/duckduckgo.com\/\?q=kw\+([^&]+).+ http://m.kuwo.cn/?type=all&catalog=yueku20177&key=$1 302
+
 # ytb  (YouTube)
 ^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
 
 # ph  (PornHub) 
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
 
+
+# yfs 音范丝搜索
+^https:\/\/duckduckgo.com\/\?q=yfs\+([^&]+).+ http://www.yinfans.me/?s=$1 302
+
+
+
+
+#学术
+
+#csx(citeSeerX)
+^https:\/\/duckduckgo.com\/\?q=csx\+([^&]+).+ http://citeseerx.ist.psu.edu/search?q=$1 302
+
+#fts (findarticles)
+^https:\/\/duckduckgo.com\/\?q=fts\+([^&]+).+ http://findarticles.com/find?q=$1 302
+
+# mdv (medrxiv)
+^https:\/\/duckduckgo.com\/\?q=mdv\+([^&]+).+ https://www.medrxiv.org/search/$1 302
+
+
+
+
+
+
+
+#网盘资源搜索
+
 # gd  (Google Drive)
 ^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
 
+# zp (Google Drive)
+^https:\/\/duckduckgo.com\/\?q=zp\+([^&]+).+ https://zhao.pp.ua/?q=$1&version=1.0.1 302
+
 # tgd  (t.me/gdurl 搜索 Google Drive 资源)
 ^https:\/\/duckduckgo.com\/\?q=tgd\+([^&]+).+ https://t.me/s/gdurl?q=$1 302
+
+#xmp（小马网盘资源搜索）
+^https:\/\/duckduckgo.com\/\?q=xmp\+([^&]+).+ https://xiaomapan.com/search?keyword=$1 302
+
+#dl (大力网盘搜索)
+^https:\/\/duckduckgo.com\/\?q=dl\+([^&]+).+ https://www.dalipan.com/search?keyword=$1 302
+
+
+
+
+#备件
+
+#xm: 小米备件
+^https:\/\/duckduckgo.com\/\?q=xm\+([^&]+).+ https://www.mi.com/service/materialprice/ 302
+
+#hw: 华为备件
+^https:\/\/duckduckgo.com\/\?q=hw\+([^&]+).+ https://consumer.huawei.com/cn/support/sparepart-price/ 302
+
+#oppo: oppo备件
+^https:\/\/duckduckgo.com\/\?q=op\+([^&]+).+ https://support.oppo.com/cn/spare-parts-price/ 302
+
+#vi: vivo备件
+^https:\/\/duckduckgo.com\/\?q=vi\+([^&]+).+ http://www.vivo.com.cn/service/accessory/ 302
+
+#plus: 一加备件
+^https:\/\/duckduckgo.com\/\?q=plus\+([^&]+).+ https://www.oneplus.com/cn/support/repair-pricing/ 302
+
+#jg: 坚果备件
+^https:\/\/duckduckgo.com\/\?q=jg\+([^&]+).+ https://www.smartisan.com/support/#/serviceprice/ 302
+
+
+
+#游戏
+#sm: steam
+^https:\/\/duckduckgo.com\/\?q=sm\+([^&]+).+ https://store.steampowered.com/search/?term=$1 302
+
+#wg: wegame
+^https:\/\/duckduckgo.com\/\?q=wg\+([^&]+).+ https://www.wegame.com.cn/store/games/mars_vars/search_key_word-$1/sort-4/ 302
+
+#ec: epicgame
+^https:\/\/duckduckgo.com\/\?q=ec\+([^&]+).+ https://www.epicgames.com/store/zh-CN/browse?q=$1 302
+
+#cj: cubejoy
+^https:\/\/duckduckgo.com\/\?q=cj\+([^&]+).+ https://store.cubejoy.com/html/en/store/searchgoods/websearch.html?search=$1 302
+
+
+
+
+#成分
+
+#gyj: 国家食品药品监督管理总局化妆品（品牌成分查询）
+^https:\/\/duckduckgo.com\/\?q=gyj\+([^&]+).+ http://ftba.nmpa.gov.cn:8181/ftban/fw.jsp 302
+
+#gyj-in: 进口护肤品查询[频繁需要验证]
+^https:\/\/duckduckgo.com\/\?q=gyj-in\+([^&]+).+ http://cpnp.nmpa.gov.cn/province/webquery/list.jsp 302
+
+#cdna: cosdna护肤品成分搜索
+^https:\/\/duckduckgo.com\/\?q=cdna\+([^&]+).+ https://m.cosdna.com/chs/stuff.php?q=$1 302
+
+#cpro: cosdna护肤品(品牌的成分及作用搜索)
+^https:\/\/duckduckgo.com\/\?q=cpro\+([^&]+).+ https://m.cosdna.com/chs/product.php?q=$1 302
+
+#zyl: zhaoyl(找原料，需要登录，数据全)
+^https:\/\/duckduckgo.com\/\?q=zyl\+([^&]+).+ http://www.zhaoyl.com/material/search.html?q=$1 302
+
 
 
 
@@ -173,5 +521,6 @@
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 
+
 [MITM]
-hostname = %APPEND% duckduckgo.com
+hostname = %APPEND% duckduckgo.com  
