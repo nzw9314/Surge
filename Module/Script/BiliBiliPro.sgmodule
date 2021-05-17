@@ -1,6 +1,5 @@
 #!name=哔哩哔哩Pro By nzw9314
 #!desc=哔哩哔哩精简去广告、开启1080P+，(个人中心)默认禁用，需要自行开启
-#!system=ios
 
 [Rule]
 URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
